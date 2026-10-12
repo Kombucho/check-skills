@@ -1,0 +1,45 @@
+{
+  "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+  "name": "Super Inu",
+  "symbol": "SI",
+  "generated_at": "2026-10-12T21:22:00Z",
+  "rpc": "https://api.mainnet-beta.solana.com",
+  "summary": "Token-2022 mint with mint and freeze authority cleared and a 1% transfer fee withdrawn by 5KXDF6QnqhBj72hDtJNkkpFaQVUfbFXNybMsp3DiK6tD. Creation slot 449099389 contains a four-signer funding transaction, the creation (0.07 SOL to a rapid account and NVDAx sent to three wallets), and those three wallets buying. End-of-slot spendable share is 31.566% of 1,000,000,000. Their SI balance is 0 within 76 seconds and combined SOL versus the pre-funding balance is +40.168. Graduated pool is Raydium CPMM B4VFURUHHzyt8YzBGBV9jiarBvjh1EbMAbRNBnNqaxUD. Signal score 100 of 100 evaluated. Repeat launches, holder funding sources, and the post-swap quote split were not evaluated.",
+  "signal_score": {
+    "points": 100,
+    "evaluated_max": 100,
+    "defined_max": 110,
+    "band": "creation-slot cluster and a fast exit both showed up",
+    "unevaluated": ["same co-signers or lamport amounts on another mint"]
+  },
+  "creation": {
+    "signature": "5X4SGFFUFZCrxTeabiQFJGKGp1QjkEhH25w1XrXJryJ2GASWctDipDnFX7eHidMhHyjxWJc3x6TpvPJLrATdDSe6",
+    "slot": 449099389,
+    "block_time_utc": "2026-09-21T15:44:55Z",
+    "fee_payer": "9pkJqJLtefuna3GLtKZyF5DBWwEGUdxZUSGCmf5jZhA9"
+  },
+  "findings": [
+    {"check": "authorities", "level": "verified", "text": "Token-2022. mintAuthority null. freezeAuthority null. decimals 6. supply at slot 456191784 is 996024042.883960 SI."},
+    {"check": "authorities", "level": "verified", "text": "transferFeeBasisPoints 100. maximumFee equals the original 1,000,000,000 supply. withdrawWithheldAuthority and transferFeeConfigAuthority are 5KXDF6QnqhBj72hDtJNkkpFaQVUfbFXNybMsp3DiK6tD. withheldAmount 2082.526239 SI at slot 456191784."},
+    {"check": "authorities", "level": "verified", "text": "initializeTransferFeeConfig in the creation tx set withdraw authority to 5KXDF6… and config authority to WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh. The config authority on the mint is now 5KXDF6…. The change transaction was not located."},
+    {"check": "authorities", "level": "verified", "text": "No permanent delegate on SI. Quote mint NVDAx Xsc9qvGR1efVDFGLrVsmkzv3qi45LTBjeUKSPmx9qEh has permanent delegate 5aMNNLQJwAEeoemTEMkv5NVjqKwvvefRYCQ5Z67HFvEq. Creation log warning attaches to the NVDAx vault initialize."},
+    {"check": "metadata", "level": "verified", "text": "On-mint URI https://m.rapidlaunch.io/m/if5VgbxOC. Update authority WLHv2…. Pointer authority null."},
+    {"check": "metadata", "level": "heuristic", "text": "URI host m.rapidlaunch.io shares the rapid prefix with fee recipient rapidXMVLw5uBieKHDGvF9k4xSSDXyD2FC5wLTAajaJ and program rapidV5DAKtecYzetwCNoxXWHpezjeg4hGt9BGiVcGW."},
+    {"check": "creation-tx", "level": "verified", "text": "Five outer instructions: System transfer 0.07 SOL to rapidXMVL…, LaunchLab InitializeWithToken2022, rapidV5 NVDAx transfers, ATA createIdempotent, rapidV5 LaunchLab buy. mintTo 1000000000000000 raw then setAuthority mintTokens to null."},
+    {"check": "creation-tx", "level": "verified", "text": "NVDAx to tQi75 1.117886, 8pNSg 0.941413, 7K1yg 1.008513, curve 3.64218805. Fee payer gross SI buy 200281990.292724, post balance 198279170.389796."},
+    {"check": "bundle-detection", "level": "verified", "text": "Slot 449099389 has 1224 signatures. Creation index 1192. Previous sig 66sWAB49MK57CK1zXN38HJ4nwgm38mPT7xQUMHGtyxyJbgakKDBiD6FP9G9vRveB7N7Qhr4m8zCVSbkT4P7GiH8L is signed by the fee payer and the three wallets. SOL transfers 2.15, 1.81, 1.94 to the fee payer. Next sig 5jUWKqzrzE42fEKeRuqv9vdygSVsxEKufAcmcGLvFVKDqNYhYS67RGjFfHhn9KGB4voaiKbkvczd2NAzcthVMeWY is the three-wallet buy."},
+    {"check": "bundle-detection", "level": "derived", "text": "End-of-slot spendable SI: fee payer 198279170.389796 plus 46816113.466500 plus 35662046.687273 plus 34904902.564177 = 315662233.107746 = 31.566% of 1000000000 minted."},
+    {"check": "bundle-detection", "level": "verified", "text": "SI decreases: tQi75 36 receipts, 8pNSg 12, 7K1yg 11. First decrease 44s after creation. Balances hit 0 at +62s, +70s, and +76s."},
+    {"check": "bundle-detection", "level": "derived", "text": "SOL versus funding pre-balance: tQi75 +30.467007, 8pNSg +3.919617, 7K1yg +5.781461, combined +40.168086."},
+    {"check": "pool-math", "level": "verified", "text": "CPMM pool B4VFURUHHzyt8YzBGBV9jiarBvjh1EbMAbRNBnNqaxUD. pool_creator 5CEbueQnq1Ym2uSSx2xXds3jQAqT1BDnkA59RZobSPAG. open_time 2026-09-21T15:45:01Z. Config trade_fee_rate 2500, creator_fee_rate 10000, protocol_fee_rate 120000, fund_fee_rate 40000."},
+    {"check": "pool-math", "level": "derived", "text": "At slot 456191783, raw reserves 1459.52541578 NVDAx and 15533335.411355 SI after subtracting fund fees (protocol fees 0). Price 0.00009396085 NVDAx per SI. A 1 NVDAx exact-in swap yields 10502.590256 SI after the 1.25% fee, versus 10635.443412 with a zero fee."},
+    {"check": "lp-safety", "level": "verified", "text": "LP mint supply 955147629198 versus pool lp_supply 955147629298. Largest holder 2sRPWbzFRRfe8XNGDgfJJCU4WmmLD3gVVpLgho7fRc2H has 953.701859956, owner 3f7GcQFG397GAaEnv51zR6tsTVihYRydnydDD1cXekxH, a system account."},
+    {"check": "lp-safety", "level": "heuristic", "text": "Raydium API burnPercent 99.84 matches that share. No burn or lock instruction was decoded."},
+    {"check": "holders", "level": "derived", "text": "Top 10 non-pool holders in getTokenLargestAccounts are 18.14% of supply, under the 30% line. Largest non-pool wallet mXvJVLBBVyi9o7E2rUAdnNzUyA7gFtabEjdKfCWRTtj holds 4.09%."},
+    {"check": "fee-flows", "level": "verified", "text": "21:12:07Z withdrawWithheldTokensFromMint by 5KXDF6… for 2708.169940 SI (2jpb76zC…). 21:12:08Z CPMM SwapBaseInput sells it; pool receives 2681.088240 SI and the authority receives 0.248815 NVDAx (2X8nzBnA…)."},
+    {"check": "fee-flows", "level": "derived", "text": "27.081700 SI withheld on that sell is 1.000% of 2708.169940. No quote split was in the sampled signatures after the swap."},
+    {"check": "trading-patterns", "level": "verified", "text": "42 early sell receipts share computeUnitLimit 800000 and priorityFee 100000 lamports. No listed Jito tip account in the funding, creation, or same-slot buy. 0.001 SOL to AstraT7S7BfzPFVBQRKNRSkv17Rq3pmaWqGyGXzp4NZ5 is unlabeled."},
+    {"check": "trading-patterns", "level": "heuristic", "text": "The three wallets exit to a zero SI balance within 76 seconds, after an internal pass onto tQi75 in slot 449099606. No second buy in that window. Later signatures were not decoded."},
+    {"check": "dev-history", "level": "verified", "text": "Fee payer 9pkJqJLtefuna3GLtKZyF5DBWwEGUdxZUSGCmf5jZhA9, pre-balance 244.386310 SOL on the funding receipt. Fourteen older signatures were listed and not decoded."}
+  ]
+}
